@@ -1,0 +1,67 @@
+# Importa as funções do SikuliX
+from sikuli import *
+
+# 🟢 Abrindo um aplicativo (Exemplo: Bloco de Notas no Windows)
+App.open("notepad.exe")
+
+# 🟡 Espera o aplicativo abrir antes de prosseguir
+wait(2)  # Aguarda 2 segundos para garantir que o aplicativo carregue
+
+# 🔵 Digitação de texto
+type("Testando automação com SikuliX!")  # Simula a digitação de um texto
+
+# 🔴 Usando atalhos de teclado (Exemplo: Selecionar tudo e copiar)
+keyDown(Key.CTRL)  # Pressiona a tecla CTRL
+type("a")  # Pressiona "A" (Selecionar Tudo)
+type("c")  # Pressiona "C" (Copiar)
+keyUp(Key.CTRL)  # Solta a tecla CTRL
+
+# 🟢 Simulando cliques com imagens
+if exists("botao_salvar.png"):  # Verifica se a imagem do botão existe na tela
+    click("botao_salvar.png")  # Clica no botão se ele for encontrado
+
+# 🟡 Simulando duplo clique
+if exists("arquivo.png"):
+    doubleClick("arquivo.png")  # Dando duplo clique no arquivo para abrir
+
+# 🔵 Movendo o mouse para um local específico e clicando
+if exists("icone_config.png"):
+    hover("icone_config.png")  # Move o mouse para o ícone
+    click()  # Realiza um clique simples
+
+# 🔴 Clique com o botão direito do mouse
+if exists("opcao_menu.png"):
+    rightClick("opcao_menu.png")  # Abre um menu de contexto
+
+# 🟢 Digitação dentro de um campo de texto
+if exists("campo_input.png"):
+    click("campo_input.png")  # Clica no campo de entrada
+    type("Automação com SikuliX")  # Digita um texto no campo selecionado
+
+# 🟡 Selecionando opções em menus suspensos
+if exists("menu_dropdown.png"):
+    click("menu_dropdown.png")  # Clica no menu para expandi-lo
+    wait(1)  # Espera o menu carregar
+    if exists("opcao_desejada.png"):
+        click("opcao_desejada.png")  # Seleciona uma opção no menu
+
+# 🔵 Rolagem de tela (Scroll)
+if exists("area_scroll.png"):
+    wheel("area_scroll.png", Button.WHEEL_DOWN, 5)  # Rola para baixo 5 "cliques"
+    wheel("area_scroll.png", Button.WHEEL_UP, 3)  # Rola para cima 3 "cliques"
+
+# 🔴 Reconhecimento de texto na tela usando OCR (Optical Character Recognition)
+texto_detectado = find("campo_texto.png").text()  # Captura texto dentro de uma área
+print("Texto encontrado:", texto_detectado)
+
+# 🟢 Monitorando mudanças na tela e reagindo a eventos
+while not exists("botao_ok.png"):  # Aguarda o botão "OK" aparecer
+    wait(1)  # Espera 1 segundo antes de verificar novamente
+click("botao_ok.png")  # Clica no botão quando ele aparecer
+
+# 🔵 Arrastar e soltar elementos na interface
+if exists("arquivo.png") and exists("pasta_destino.png"):
+    dragDrop("arquivo.png", "pasta_destino.png")  # Arrasta um arquivo para uma pasta
+
+# 🟢 Fechar o aplicativo
+App.close("notepad.exe")  # Fecha o Bloco de Notas
