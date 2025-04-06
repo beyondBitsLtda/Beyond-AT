@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+:root{
+    --cor1: #0068A8;
+    --cor2: #2BDEFD;
+    --cor3: #01080eea;
+    --cor4: #2BFDBE;
+    --cor5: #151C21;
+}
+
+body{
+    background: var(--cor3);
+}
+
+main{ 
+    font-family: "Poppins", sans-serif;
+    color: var(--cor2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.conteudo_form{ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    text-align: center;
+    margin: 20px 0px auto;
+}
+
+.container_form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 121%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--cor2);
+}
+
+.playerName{
+    width: 60%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.inputScore{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.btn_cadastrar{
+    height: 35px;
+    width: 33%;
+    cursor: pointer;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 11pt;
+    background-color: var(--cor1);
+    color: white;
+    transition: filter 0.2s;
+}
+
+.btn_cadastrar:not(:disabled):hover{
+    filter: brightness(0.8);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    padding: 5px 0px;
+}
+
+
+.playerList {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.gameArea {
+    margin-top: 30px;
+    margin-top: 30px;
+    position: fixed;
+    top: -11px;
+    right: 20px;
+    background-color: var(--cor3);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--cor4);
+    width: 250px;
+    text-align: center;
+}
+
+#turnOrder li, #scoreBoard li {
+    margin-bottom: 10px;
+}
+
+#scoreBoardContainer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor3);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--cor4);
+    width: 250px;
+    text-align: center;
+}
+
+#scoreBoardContainer h2 {
+    color: #56ccf2;
+    margin-bottom: 10px;
+}
+
+.scoreBox {
+    background-color: #2c3e50;  
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #56ccf2; 
+    text-align: center;
+    
+}
+
+.container_perguntas{
+    width: 90%;
+    max-width: 800px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px var(--cor2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--cor5);
+}
+
+.questions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.questions{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor4);
+    margin-bottom: 10px;
+}
+
+.answers-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.next-question{
+    margin-top: 32px;
+}
+
+button{
+    height: 45px;
+    padding: 0 32px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--cor1);
+    color: white;
+    transition: filter 0.2s;
+    cursor: pointer;
+}
+
+button:not(:disabled):hover{
+    filter: brightness(0.8);
+}
+
+.hide {
+    display: none;
+  }
+
+.correct{
+    background-color: rgb(35, 220, 60);
+}
+
+.incorrect{
+    background-color: rgb(208, 23, 23);
+}
+
+.answer:disabled{
+    cursor: not-allowed;
+}
+
+.final-message{
+    font-size: 16px;
+    text-align: center;
+    color: var(--cor2);
+}
+
+.final-message span{
+    display: block;
+    margin-top: 8px;
+    color: red;
+}
+
+h3{
+    color: var(--cor4);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cadastro" class="screen">
+        <h1>Cadastro de Jogadores</h1>
+        <p>Digite o nome de 4 jogadores (sem nomes repetidos):</p>
+        <form id="formCadastro">
+            <input type="text" id="player1" placeholder="Jogador 1" required><br>
+            <input type="text" id="player2" placeholder="Jogador 2" required><br>
+            <input type="text" id="player3" placeholder="Jogador 3" required><br>
+            <input type="text" id="player4" placeholder="Jogador 4" required><br>
+            <button type="submit">Cadastrar Jogadores</button>
+        </form>
+    </div>
+
+    <div id="instrucoes" class="screen" style="display: none;">
+        <div id="introducao" class="screen" style="display: block;">
+            <h1>Bem-vindo ao Jogo de Tecnologia</h1>
+            <section class="text">
+                <p>
+                    Este projeto é uma iniciativa colaborativa para praticar
+                    programação e desenvolver um sistema de perguntas e respostas.
+                    O mesmo apresenta em sua abordagem de processos, execuções
+                    precisas, com entrevistas, levantamentos e estudos de requisitos
+                    por parte dos membros da equipe.
+                </p>
+            </section>
+        </div>
+
+        <h1>Instruções do Jogo</h1>
+        <p> ● Você terá 10 perguntas sobre tecnologia. Cada resposta correta vale 100 pontos. O jogo começa com 0 pontos
+            para cada jogador.</p>
+        <p> ● As perguntas são sobre Programação, DevOps e Banco de Dados.</p>
+        <p> ● O jogo tem perguntas no formato Verdadeiro ou Falso. Após cada resposta, o fundo mudará para indicar se a
+            resposta foi correta ou não. O objetivo é ser o primeiro a atingir 1000 pontos. O jogo reinicia após a
+            última pergunta ou se alguém atingir a pontuação máxima.</p>
+        <h2>
+            <p>Instruções:</p>
+        </h2>
+        <p>
+            1- O primeiro jogador a atingir 1000 pontos vence o jogo.<br>
+            2- O jogo consiste em perguntas de Verdadeiro ou Falso sobre tecnologia.<br>
+            3- O jogo reinicia após a última pergunta ou quando alguém atinge a pontuação máxima.<br>
+            4- Cada resposta correta vale 100 pontos.<br>
+            5- O jogo começa com todos os jogadores com 0 pontos.<br>
+            6- O jogo terminará quando um jogador atingir 1000 pontos.<br>
+            7- Quando um jogador ganhar, será exibido o vencedor.<br>
+            8- Caso o tempo acabe ou todos os jogadores falharem, o jogo também terminará.<br>
+            9- Após a vitória ou término, será possível reiniciar o jogo.<br>
+            10- O botão "Reiniciar Jogo" será exibido após o término.<br>
+        </p>
+        <button id="startGameBtn">Começar Jogo</button>
+    </div>
+
+    <div id="jogo" class="screen" style="display: none;">
+        <h1>Jogo de Perguntas</h1>
+        <div id="jogadorAtual">
+            <p><strong>Jogador Atual: <span id="jogadorNome"></span></strong></p>
+        </div>
+        <div id="jogadores">
+            <p id="scoreboard"></p>
+        </div>
+        <div id="pergunta">
+            <p id="perguntaText"></p>
+            <button id="trueBtn">Verdadeiro</button>
+            <button id="falseBtn">Falso</button>
+            <p id="respostaErrada" style="font-size: 14px; color: #f00;"></p>
+        </div>
+    </div>
+
+<!-- Tela de Fim de Jogo -->
+<div id="fimJogo" class="screen" style="display: none;">
+    <div id="pontuacoesFinais">
+        <!-- Aqui as pontuações finais serão exibidas -->
+    </div>
+    <button id="reiniciarBtn">Reiniciar Jogo</button>
+</div>
+    <script src="game.js"></script>
+</body>
+
+</html>

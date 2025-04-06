@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://i.gifer.com/Nv2.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundLoop 10s linear infinite;
+}
+
+@keyframes backgroundLoop {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+#jogo{
+    width: 50%;
+    background-color: rgb(24, 29, 34);
+    margin: 14% auto;
+}
+
+.screen {
+    background-color: rgba(0, 0, 0, 0.384); /* Fundo semi-transparente preto */
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Texto branco para contraste rgba(148, 148, 148, 0.61)*/
+    font-family: Arial, sans-serif; /* Fonte igual às caixas de entrada */
+    font-size: 16px; /* Tamanho da fonte igual às caixas de entrada */
+}
+
+#cadastro, #instrucoes, #jogo {
+    display: block;
+}
+
+button {
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 3px rgb(33, 178, 223);
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Fonte igual às caixas de entrada */
+}
+
+#perguntaText {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#jogadores {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#reiniciarBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Estilo para centralizar a div 'instrucoes' com conteúdo */
+#instrucoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #111;
+    color: white;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif; /* Fonte igual às caixas de entrada */
+    font-size: 16px; /* Tamanho da fonte igual às caixas de entrada */
+}
+
+/* Centralizando o título 'Instruções do Jogo' */
+#instrucoes h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Para garantir que os parágrafos dentro da div fiquem alinhados à esquerda */
+#instrucoes p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Centralizando o botão 'Começar Jogo' */
+#startGameBtn {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #08b408;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#startGameBtn:hover {
+    background-color: #08b425;
+}
+
+#jogadorAtual {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px green;
+    width: fit-content;
+    margin: 10px auto;
+    color: white;
+    font-family: Arial, sans-serif; /* Fonte igual às caixas de entrada */
+}
+
+#jogadorAtual strong {
+    font-weight: bold;
+}
+
+/* Estilos para a tela de fim de jogo */
+#fimJogo {
+    width: 40%;
+    margin:auto;
+    margin-top: 300px;
+    max-width: 80%;
+    color: white;
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte igual às caixas de entrada  max-width: 80%;   margin: 0 auto;*/
+    font-size: 16px; /* Tamanho da fonte igual às caixas de entrada */
+    box-shadow: 0px 0px 5px rgb(58, 130, 223);
+}
+
+/*#fimJogo {
+    background: url('https://i.gifer.com/Nv2.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundLoop 10s linear infinite;
+}*/
+
+#ranking {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#reiniciarBtn {
+    background-color: #08b408;
+    color: white;
+    border: 2px solid #08b408;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#reiniciarBtn:hover {
+    background-color: #08b408;
+}

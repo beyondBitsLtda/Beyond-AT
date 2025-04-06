@@ -1,0 +1,3 @@
+versão do Java JDK mais recente
+Versão do Python mais recente
+Versão da biblioteca sikilux mais recente.

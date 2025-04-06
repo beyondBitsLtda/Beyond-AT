@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="\img\icone.png" type="image/x-icon">
+  <link rel="stylesheet" href="../style/rodar_demo_style.css">
+  <title>Rodar Demo - MG Game</title>
+</head>
+<body>
+  <main>    
+    
+    <div class="conteudo_form">
+      <section class="text">
+    
+        <h1>Demo</h1>
+        <p>A diversão começa agora, desafie sua mente com perguntas divertidas!</p>
+      </section>
+
+      <section class="container_form">
+        <form action="" class="form">
+      
+          <h2>Cadastrar Jogadores</h2>
+    
+          <label for="pontos" class="labelScore hide">Pontos especiais:</label>
+          <input type="number" name="qtd_pontos" class="inputScore hide">
+
+          <label for="nome" class="labelPlayer">Nome dos jogadores:</label>
+          <input type="text" name="nome_players" class="playerName">
+
+          <div class="playerList"></div>
+          <input type="button" value="Cadastrar" class="btn_cadastrar">
+        </form>
+      </section>
+    </div> 
+    
+    <div class="gameArea hide">
+      <h2 id="currentPlayer">Vez de: </h2>
+      <ul id="turnOrder"></ul>
+      <div id="scoreBoardContainer"></div>
+    </div>
+
+    <div class="container_perguntas hide"> 
+      <div class="questions-container hide"> 
+        <span class="questions">Quiz da TI</span>
+        <div class="answers-container">
+          <button class="answer button hide">Resposta 1</button>
+          <button class="answer button hide">Resposta 2</button>
+          <button class="answer button hide">Resposta 3</button>
+          <button class="answer button hide">Resposta 4</button>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <button class="btn_Iniciargame">Começar Quiz!</button>
+        <button class="next-question hide">Próxima pergunta</button>
+      </div>
+    </div>
+  </main>
+  <script src="../src/rodar_game_demo.js" defer></script>
+</body>
+</html>
